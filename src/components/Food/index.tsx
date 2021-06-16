@@ -16,14 +16,14 @@ interface FoodData {
 interface FoodProps {
   food: FoodData
   handleDelete: (id: number) => void
-  handleEditingFood: (food: FoodData) => void
+  handleEditFood: (food: FoodData) => void
 }
 
-const Food = ({ food, handleDelete, handleEditingFood }: FoodProps) => {
+const Food = ({ food, handleDelete, handleEditFood }: FoodProps) => {
   const [isAvailable, setIsAvailable] = useState(food.available);
 
   const setEditingFood = () => {
-    handleEditingFood(food)
+    handleEditFood(food)
   }
 
   const toggleAvailable = async () => {

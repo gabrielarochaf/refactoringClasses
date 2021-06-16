@@ -18,14 +18,14 @@ interface ModalEditFoodProps {
   isOpen: boolean,
   setIsOpen: () => void;
   editingFood: FoodData
-  handleEditingFood: (data: FoodData) => void
+  handleUpdateFood: (data: FoodData) => void
 }
 
-const ModalEditFood = ({ isOpen, setIsOpen, handleEditingFood, editingFood }: ModalEditFoodProps) => {
+const ModalEditFood = ({ isOpen, setIsOpen, handleUpdateFood, editingFood }: ModalEditFoodProps) => {
   const formRef = useRef(null);
 
   const handleSubmit = async (data: FoodData) => {
-    handleEditingFood(data);
+    handleUpdateFood(data);
     setIsOpen();
   }
 
